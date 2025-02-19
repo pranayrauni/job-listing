@@ -125,7 +125,7 @@ const JobPage = () => {
   )
 }
 
-//ye dusra method hai data fetching ka hai dataLoader
+//ye dusra method hai data fetching ka hai dataLoader... ye react-router ka feature hai 
 const jobLoader = async ({params}) => {       //this is from rect-router
   const res = await fetch(`/api/jobs/${params.id}`);
   const data = await res.json();
@@ -133,4 +133,4 @@ const jobLoader = async ({params}) => {       //this is from rect-router
 }
 
 // export default JobPage
-export {JobPage as default, jobLoader};
+export {JobPage as default, jobLoader};    // joLoader jo export ho rha hai wo reoute k through useLoaderData hook use kar k upar esi page m use hoga
